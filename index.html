@@ -30,9 +30,9 @@
             <div id="calculadora">
                 <h1 id="Title">Calculadora</h1>
                 <label>Sua Altura(M)</label>
-                <input type="number" name="altura" id="altura">
+                <input type="number" name="altura" id="altura" placeholder="Ex: 1.80" required>
                 <label>Seu Peso(Kg)</label>
-                <input type="number" name="Peso" id="Peso">
+                <input type="number" name="Peso" id="Peso" placeholder="Ex: 80" required>
                 <input id="botao" type="button" value="Calcular" onclick="Calcular()">
                 <h2 id="number-resultado"></h2>
                 <h3 id="text-resultado"></h3>
@@ -47,9 +47,10 @@
         var calculo = window.document.getElementById('number-resultado');
         var text_resultado = window.document.getElementById('text-resultado');
         calculo.innerHTML = `seu IMC é de: ${IMC.toFixed(2)}`
+        //----------> estrutura de condições <-----------------------
             if(IMC < 17){
                 text_resultado.innerHTML = `Você está muito abaixo do Peso Ideal`
-            }else if (IMC == 17 || IMC < 18.5) {
+                }else if (IMC == 17 || IMC < 18.5) {
                     text_resultado.innerHTML = `Você está um pouco abaixo do peso `
                 }else if ( IMC == 18.5 || IMC < 24.90){
                     text_resultado.innerHTML = `Você está no peso ideal`
